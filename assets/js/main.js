@@ -44,5 +44,16 @@
 
 })(jQuery);
 $(document).ready(function(){
-	$('#ex1').modal();
+	var ex1 = $('#ex1');
+	
+	ex1.on($.modal.CLOSE, function(event, modal) {
+		console.log('cerrado')
+	  var vid = document.getElementById('video');
+	  vid.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+	});
+
+	ex1.modal();
+	var video = $('#video');
+	var height = video.width() * 0.7;
+	video.css('height', height);
 });

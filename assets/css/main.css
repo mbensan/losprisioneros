@@ -3146,35 +3146,41 @@
 
 /* Footer */
 
-	#footer {
-		padding: 2rem 0 0.1rem 0 ;
-		text-align: center;
+#footer {
+	padding: 2rem 0 0.1rem 0 ;
+	text-align: center;
+}
+
+#footer a {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+	#footer a:hover {
+		color: #FFF;
 	}
 
-		#footer a {
-			color: rgba(255, 255, 255, 0.75);
-		}
+#footer .copyright {
+	color: #bbb;
+	font-size: 0.9rem;
+	margin: 0 0 2rem 0;
+	padding: 0 1rem;
+	text-align: center;
+}
 
-			#footer a:hover {
-				color: #FFF;
-			}
-
-		#footer .copyright {
-			color: #bbb;
-			font-size: 0.9rem;
-			margin: 0 0 2rem 0;
-			padding: 0 1rem;
-			text-align: center;
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#footer {
-				padding: 1rem 0 0.1rem 0 ;
-			}
-
-		}
 #ex1 {
-	width: auto;
+	width: 60%;
 	max-width: 1000px;
+}
+#ex1 iframe {
+	width: 90%;
+}
+@media screen and (max-width: 736px) {
+
+	#footer {
+		padding: 1rem 0 0.1rem 0 ;
+	}
+	#ex1 {
+		width: 90%;
+	}
+
 }
