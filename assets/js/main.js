@@ -46,10 +46,10 @@
 $(document).ready(function(){
 	var ex1 = $('#ex1');
 	
-	ex1.on($.modal.CLOSE, function(event, modal) {
-		console.log('cerrado')
-	  var vid = document.getElementById('video');
-	  vid.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+	ex1.on($.modal.OPEN, function(event, modal) {
+		console.log('abierto')
+		var vid = document.getElementById('video');
+		vid.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*'); 
 	});
 
 	ex1.modal();
